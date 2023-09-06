@@ -8,3 +8,10 @@ a,2 c,2 b,2 e,1 d,1 g,1 f,1
 Hints: Use dict to store key/value pairs. Use dict.get() method to lookup a key with default value.
 Use str.join() method and dict comprehension for print result
 """
+
+test_str = "abcdefgabc"
+char_count = {}
+for char in test_str:
+    char_count[char] = char_count.get(char, 0) +1
+result = ' '.join(f'{char},{value}' for char, value in char_count.items())
+print (result)
