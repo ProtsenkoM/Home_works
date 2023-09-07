@@ -38,7 +38,6 @@ while error_count!= 0:
         error_count -= 1
     else: 
         print('Помилок немає')
-        print(error_count)
     finally:
         another_calc = input("Бажаєте продовжити? (Так/Ні): ")
         if another_calc.lower() != 'так':
