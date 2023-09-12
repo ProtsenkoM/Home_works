@@ -1,0 +1,6 @@
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/task_1.py: 1043 bytes
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/test_file.csv: 368 bytes
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/import csv.py: 1078 bytes
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/file_size.txt: 0 bytes
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/salaries_uah.csv: 520 bytes
+/Users/mihailprocenko/pythonproject/hilel_home_tasks/homework_task_6/task_2.py: 1189 bytes

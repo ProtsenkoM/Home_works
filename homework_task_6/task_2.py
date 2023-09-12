@@ -4,11 +4,13 @@
 
 import os
 
-root_folder = '/Users/mihailprocenko/pythonproject/hilel_home_tasks/'
+root_folder = os.path.dirname(os.path.abspath(__file__))
+name_of_file = 'file_size.txt'
+file_path = os.path.join(root_folder,name_of_file)
 
 list_of_files = {}
 
-with open ('homework_task_6/files_size.txt', 'w' ) as f:
+with open (file_path, 'w' ) as f:
     for foldername, subfolders, filenames in os.walk(root_folder):
         for filename in filenames:
             filepath = os.path.join(foldername, filename)

@@ -5,22 +5,33 @@
 
 import csv
 
+import os
+
 exchange_rate = 37.8
 
-with open ('homework_task_6/test_file.csv', 'r', ) as f:
+root_folder = os.path.dirname(os.path.abspath(__file__))
+input_file = 'test_file.csv'
+output_file = 'salaries_uah.csv'
+input_file_path = os.path.join(root_folder,input_file)
+output_file_path = os.path.join(root_folder,output_file)
+
+data = {}
+
+with open (input_file_path, 'r' ) as f:
     rows = csv.reader(f)
-    new_list_of_employees = [row for row in rows]
-
-with open ('homework_task_6/salaries_uah.csv', 'w', newline= '') as f:
+    headers = next(rows)
+    for row in rows:
+        employee_name = row[0]
+        salaries_usd = [float(salary) for salary in row[1:]]
+        salaries_uah = [round(salary * exchange_rate,2) for salary in salaries_usd]
+        data[employee_name] = salaries_uah
+        
+with open (output_file_path, 'w', newline= '') as f:
     writer = csv.writer(f)
-    writer.writerow(['Name', 'Salary (USD)', 'Salary (UAH)'])
+    writer.writerow(headers)
+    for employee, salaries_uah in data.items():
+        writer.writerow([employee] + salaries_uah)
 
-    for employee in new_list_of_employees:
-        name = employee[0]
-        salary_usd = float(employee[1].replace('$', '').replace(',', ''))
-        salary_uah = salary_usd * exchange_rate
-        writer.writerow([name, f'${salary_usd:.3f}', f'{salary_uah:.3f}₴'])
-
-with open ('homework_task_6/salaries_uah.csv', 'r', ) as f:
+with open (output_file_path, 'r', ) as f:
     for rows in csv.reader(f):
         print(rows)
