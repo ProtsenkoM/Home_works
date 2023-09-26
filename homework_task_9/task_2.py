@@ -105,7 +105,7 @@ class Employee:
 
         :return: Рядок з інформацією про співробітника.
         """
-        return f"Employee Name: {self.name}\nEmployee ID: {self.employee_id}\nDepartment: {self.department}\nPosition: {self.job_position}\nSalary: {self.salary}"
+        return f"Employee Name: {self._name}\nEmployee ID: {self.employee_id}\nDepartment: {self.department}\nPosition: {self.job_position}\nSalary: {self.salary}"
 
     def __repr__(self) -> str:
         """
@@ -113,10 +113,10 @@ class Employee:
 
         :return: Рядок-представлення об'єкта Employee.
         """
-        return f"Employee('{self.name}', {self.age}, {self.salary}, {self.employee_id}, '{self.department}', '{self.job_position}', '{self.birthday_date}')"
+        return f"Employee('{self._name}', {self.age}, {self.salary}, {self.employee_id}, '{self.department}', '{self.job_position}', '{self.birthday_date}')"
 
     def _do_welcome(self):
-        print(f'{self.name} says - welcome to new job')
+        print(f'{self._name} says - welcome to new job')
 
     def do_work(self):
         self._do_welcome()
