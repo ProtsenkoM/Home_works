@@ -1,5 +1,5 @@
 
-class CustomIterator():
+class CustomIterator:
     def __init__(self, sequence, start_idex, stop_idex) -> None:
         self.sequence = sequence
         self.start_index = start_idex

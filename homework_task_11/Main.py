@@ -1,6 +1,8 @@
 
 from Carriage import Carriage
 from Train import Train
+from CustomIterator  import CustomIterator
+
 
 if __name__ == '__main__':
     wagon1 = Carriage(1)
@@ -27,3 +29,7 @@ if __name__ == '__main__':
     print(len(wagon1))
     print(wagon1)
     print(wagon2)
+    new_iter = wagon1.__iter__()
+    for i in new_iter:
+        print(i)
+

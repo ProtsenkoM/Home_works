@@ -1,7 +1,7 @@
 from CustomIterator import CustomIterator
 
 
-class Carriage():
+class Carriage:
     def __init__(self, number: int) -> None:
         self.number = number
         self.passengers = []

@@ -4,7 +4,7 @@ from CustomIterator import CustomIterator
 from Carriage import Carriage
 
 
-class Train():
+class Train:
     def __init__(self, train_name: str, path: str) -> None:
         self.train_name = train_name
         self.path = path
