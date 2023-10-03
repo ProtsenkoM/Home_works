@@ -32,4 +32,5 @@ if __name__ == '__main__':
     new_iter = wagon1.__iter__()
     for i in new_iter:
         print(i)
+        
 
