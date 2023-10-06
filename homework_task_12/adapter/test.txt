@@ -1,0 +1,3 @@
+name,last_name,age,salary
+John,Malkovich,28,1000
+Mike,Protsenko,30,2000
